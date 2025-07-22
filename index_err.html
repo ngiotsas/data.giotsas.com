@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Not Configured | DATA.GIOTSAS.COM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            gap: 3rem;
+        }
+        
+        .logo {
+            text-align: center;
+        }
+        
+        .blocked-icon {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .status-section {
+            text-align: center;
+            color: #808080;
+            max-width: 500px;
+        }
+        
+        .status-title {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+        
+        .status-message {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .status-description {
+            font-size: 1rem;
+            opacity: 0.7;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <svg width="300" height="50" viewBox="0 0 300 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="150" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="normal" text-anchor="middle" fill="#808080">DATA.GIOTSAS.COM</text>
+        </svg>
+    </div>
+    
+    <div class="blocked-icon">
+        <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer circle -->
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#808080" stroke-width="4"/>
+            <!-- Inner blocked symbol -->
+            <circle cx="60" cy="60" r="35" fill="none" stroke="#808080" stroke-width="3"/>
+            <!-- Diagonal line (blocked symbol) -->
+            <line x1="35" y1="35" x2="85" y2="85" stroke="#808080" stroke-width="6" stroke-linecap="round"/>
+            <!-- Settings gear icon -->
+            <g transform="translate(60,60)">
+                <circle cx="0" cy="0" r="8" fill="#808080"/>
+                <path d="M-12,-3 L-16,-3 L-16,3 L-12,3 Z M12,-3 L16,-3 L16,3 L12,3 Z M-3,-12 L3,-12 L3,-16 L-3,-16 Z M-3,12 L3,12 L3,16 L-3,16 Z" fill="#808080"/>
+                <path d="M-9,-9 L-11,-11 L-8,-14 L-6,-12 Z M9,-9 L11,-11 L14,-8 L12,-6 Z M-9,9 L-11,11 L-8,14 L-6,12 Z M9,9 L11,11 L14,8 L12,6 Z" fill="#808080"/>
+            </g>
+        </svg>
+    </div>
+    
+    <div class="status-section">
+        <div class="status-title">Settings Not Configured</div>
+        <div class="status-message">Try again later</div>
+        <div class="status-description">The system configuration is currently unavailable. Please check back in a few minutes.</div>
+    </div>
+    
+    <iframe 
+        srcdoc="&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;style&gt;
+                body { 
+                    margin: 0; 
+                    padding: 0; 
+                    display: flex; 
+                    flex-direction: column;
+                    justify-content: center; 
+                    align-items: center; 
+                    min-height: 100vh;
+                    font-family: Arial, sans-serif;
+                    background: transparent;
+                    gap: 20px;
+                }
+                .button {
+                    background: #808080;
+                    color: white;
+                    border: none;
+                    padding: 15px 30px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border-radius: 0;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                .button:hover { background: #696969; }
+                .button:active { background: #555555; }
+                .button:disabled { 
+                    background: #cccccc; 
+                    cursor: not-allowed; 
+                }
+                a { text-decoration: none; }
+                .giotsas-link {
+                    display: inline-block;
+                    margin-top: 10px;
+                }
+                .giotsas-box {
+                    background: linear-gradient(135deg, #f8f8f5 0%, #e8e8e5 50%, #d0d0cd 100%);
+                    padding: 12px 20px;
+                    border-radius: 3px;
+                    color: #555555;
+                    font-family: Times, serif;
+                    font-size: 16px;
+                    transition: opacity 0.3s ease;
+                }
+                .giotsas-box:hover {
+                    opacity: 0.8;
+                }
+                .retry-info {
+                    text-align: center;
+                    color: #808080;
+                    font-size: 12px;
+                    margin-top: 10px;
+                    opacity: 0.7;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;button class='button' onclick='parent.location.reload()'&gt;Retry Configuration&lt;/button&gt;
+            &lt;button class='button' onclick='parent.location.href=&quot;/&quot;'&gt;Go Home&lt;/button&gt;
+            &lt;button class='button' disabled&gt;Access Settings&lt;/button&gt;
+            &lt;a href='https://giotsas.com' target='_blank' class='giotsas-link'&gt;
+                &lt;div class='giotsas-box'&gt;Go to Giotsas.com&lt;/div&gt;
+            &lt;/a&gt;
+            &lt;div class='retry-info'&gt;Configuration will be retried automatically&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;" 
+        width="320" 
+        height="300" 
+        style="border: none;">
+    </iframe>
+</body>
+</html>
